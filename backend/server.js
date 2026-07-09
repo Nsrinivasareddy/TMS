@@ -21,7 +21,8 @@ const app = express();
 
 
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5174"], // ఇలా అరే (Array) రూపంలో ఇవ్వండి
+  origin: ["http://localhost:5173", "http://localhost:5174", "https://your-vercel-app-url.vercel.app"], // ఇలా అరే (Array) రూపంలో ఇవ్వండి
+
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
