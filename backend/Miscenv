@@ -1,0 +1,4 @@
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/TMS_Database
+EMAIL_USER='nelaturisrinivasareddy@gmail.com'
+EMAIL_PASS='hvaq ikpw vhss gyep'

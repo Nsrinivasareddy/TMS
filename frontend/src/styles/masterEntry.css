@@ -1,0 +1,248 @@
+/* src/styles/masterEntry.css */
+
+.master-entry-container {
+    padding: 8px;
+    min-height: 100vh;
+    background-color: #0b1437;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.master-entry-card {
+    width: 100%;
+    max-width: 950px;
+    background-color: #111c44;
+    border-radius: 6px;
+    padding: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.master-entry-title {
+    color: #fff;
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Options Button Panel */
+.option-button-panel {
+    display: flex;
+    gap: 6px;
+    background-color: #1b254b;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.panel-label {
+    color: #ecc94b;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.panel-btn {
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #243068;
+    color: #fff;
+    transition: background 0.2s;
+}
+
+.panel-btn.active-mode {
+    background-color: #4318ff;
+}
+
+.panel-btn.btn-exit {
+    background-color: #e53e3e;
+    margin-left: auto;
+}
+
+/* Error/Success Boxes */
+.master-entry-message-box {
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.master-entry-message-box.success {
+    background-color: rgba(72,187,120,0.2);
+    color: #48bb78;
+    border: 1px solid #48bb78;
+}
+
+.master-entry-message-box.error {
+    background-color: rgba(229,62,62,0.2);
+    color: #f56565;
+    border: 1px solid #e53e3e;
+}
+
+/* Search Mode Row */
+.search-mode-container {
+    margin-bottom: 8px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: #1b254b;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.search-label {
+    color: #ecc94b;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.search-input {
+    width: 120px !important;
+}
+
+.btn-search {
+    padding: 4px 15px;
+    background-color: #4318ff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Form Structures */
+.main-entry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.account-level-row {
+    background-color: #1b254b;
+    padding: 6px 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.radio-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.status-badge {
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.status-badge.active { background-color: #48bb78; }
+.status-badge.inactive { background-color: #e53e3e; }
+
+/* Grid System */
+.master-entry-grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.master-entry-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.master-entry-label {
+    color: #a0aec0;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.master-entry-input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #243068;
+    background-color: #0b1437;
+    color: #fff;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.master-entry-input:disabled {
+    background-color: #1a202c;
+    color: #a0aec0;
+    cursor: not-allowed;
+}
+
+.master-entry-input.readonly-status {
+    background-color: #1a202c;
+    color: #ecc94b;
+    font-weight: bold;
+}
+
+/* Footer Dates */
+.dates-footer-panel {
+    margin-top: 5px;
+    padding: 8px;
+    background-color: #0f172a;
+    border-radius: 4px;
+    border-left: 3px solid #ecc94b;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.date-block-label { color: #a0aec0; }
+.date-block-value { color: #fff; font-weight: bold; }
+.date-block-value.running { color: #48bb78; }
+.date-block-value.closed { color: #f56565; }
+
+.footer-date-input {
+    padding: 2px 5px;
+    background-color: #0b1437;
+    color: #fff;
+    border: 1px solid #243068;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* Action Buttons */
+.submit-btn-container {
+    margin-top: 5px;
+}
+
+.master-entry-submit-button {
+    width: 100%;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+

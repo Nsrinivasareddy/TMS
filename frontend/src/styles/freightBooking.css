@@ -1,0 +1,487 @@
+/* ప్రధాన ఫారమ్ కంటైనర్ */
+.sticky-form-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #f8f9fa;
+  
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+/* టాప్ నావిగేషన్ బార్ */
+.line-1-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a237e;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 2px;
+}
+
+.nav-left {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* 1. Payment Modes Buttons */
+.pay-modes {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.pay-mode-btn {
+  background-color: #3b5998; /* డీఫాల్ట్ బ్లూ కలర్ */
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 18px; /* సైజు సర్దుబాటు */
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px; /* గుండ్రటి అంచులు */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.pay-mode-btn:hover {
+  background-color: #5972a8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px); /* పైకి లేచే ఎఫెక్ట్ */
+}
+
+.pay-mode-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.pay-mode-btn.active {
+  background-color: #28a745; /* డైనమిక్ యాక్టివ్ కలర్ (ఆకుపచ్చ) */
+  border-color: #1e7e34;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item-link {
+  text-decoration: none;
+   color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* 2. Back Menu Button */
+.back-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn:hover {
+  background: #d32f2f;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.back-btn:active {
+  transform: translateY(1px);
+}
+
+/* ప్రధాన లేఅవుట్ (ఎడమవైపు 85% మరియు కుడివైపు 15%) */
+.content-layout-80-20 {
+  display: flex;
+  gap: 2px;
+  width: 100%;
+}
+
+.left-80 {
+  flex: 0 0 85%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* హెడర్ లైన్ */
+.line-2-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #1a237e;
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex-wrap: nowrap;
+}
+
+.f-grp {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.f-grp label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #f2eeee;
+}
+
+.f-grp input {
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.stn-input-small {
+  width: 60px;
+}
+
+.quot-input-small {
+  width: 60px;
+}
+
+.stn-name-val {
+  color: #d6d31c;
+  font-weight: bold;
+  margin-left: 8px;
+  font-size: 13px;
+}
+
+.kms-val {
+  margin-left: 12px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #e7eb12;
+}
+
+/* బాక్సుల అమరిక */
+.line-3-boxes {
+  display: grid;
+  grid-template-columns: 2.10fr 2.10fr 0.70fr 0.60fr;
+  gap: 2px;
+  width: 100%;
+  background: transparent;
+  margin-top: 2px;
+}
+
+.entry-box {
+  background: #1a237e;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: white;
+  height: 100%;
+}
+
+.entry-box h4 {
+  margin: 0 0 4px 0;
+  text-align: center;
+  font-size: 15px;
+  color: #e3eb0b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 3px;
+}
+
+.row-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+  margin-bottom: 2px;
+}
+
+.row-input label {
+  font-size: 12px;
+  font-weight: bold;
+  width: 18%;
+  color: #ffffff;
+  text-align: left;
+}
+
+.row-input input,
+.row-input textarea {
+  width: 80%;
+  padding: 3px;
+  font-size: 11px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.row-input textarea {
+  resize: vertical;
+  min-height: 25px;
+}
+
+.mini-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2px;
+  align-items: center;
+}
+
+.mini-grid label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.mini-grid input {
+  padding: 2px;
+  font-size: 11px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.entry-box label {
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  margin-top: 2px;
+}
+
+.entry-box input[type="checkbox"] {
+  margin-left: 5px;
+  width: auto !important;
+}
+
+.manual-ddc-input {
+  margin-top: 3px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.small-input {
+  width: 60px !important;
+  padding: 2px !important;
+  font-size: 10px !important;
+}
+
+/* కుడివైపు సమ్మరీ బాక్స్ */
+.right-20-summary {
+  flex: 0 0 14.8%;
+  background: #1a237e;
+  padding: 4px;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.right-20-summary h4 {
+  margin: 2px 2px 10px 2px;
+  text-align: center;
+  font-size: 12px;
+  color: #e3eb0b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 5px;
+}
+
+.summary-grid-mini {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 11px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.summary-label {
+  color: #cccccc;
+  text-align: left;
+  flex: 1;
+}
+
+.summary-value {
+  font-weight: bold;
+  text-align: right;
+  flex: 1;
+}
+
+.gst-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 6px;
+  margin-top: 2px;
+}
+
+.summary-divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 10px 0;
+}
+
+.summary-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: bold;
+  color: #64ffda;
+  margin-top: auto;
+}
+
+.total-label {
+  text-align: left;
+}
+
+.total-value-highlight {
+  text-align: right;
+  color: #64ffda;
+}
+
+/* యాక్షన్ బటన్స్ */
+.line-4-actions {
+  display: flex;
+  justify-content: space-between;
+  background: #1a237e;
+  padding: 4px;
+  border-radius: 5px;
+  margin-top: 5px;
+  color: white;
+}
+
+.desc-inputs {
+  display: flex;
+  gap: 6px;
+  width: 70%;
+}
+
+.desc-inputs input {
+  padding: 3px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  width: 100%;
+}
+
+.btn-group {
+  display: flex;
+  gap: 4px;
+}
+
+.btn-save, .btn-print, .btn-clear {
+  padding: 6px 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-save:hover, .btn-print:hover, .btn-clear:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+
+.btn-save { background: #4caf50; color: white; border: none; }
+.btn-print { background: #2196f3; color: white; border: none; }
+.btn-clear { background: #f44336; color: white; border: none; }
+
+/* పెండింగ్ టేబుల్ డిజైన్ */
+.scrolling-pending-area {
+  margin-top: 5px;
+  height: 350px;
+  max-height: 350px;
+  overflow-y: auto;
+  background: #1a237e;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 2px;
+  color: white;
+}
+
+.pending-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pending-table th {
+  background-color: #0d1642;
+  color: #e3eb0b;
+  padding: 4px;
+  text-align: left;
+  font-size: 11px;
+}
+
+.pending-table td {
+  padding: 4px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 11px;
+   font-weight: bold;
+}
+
+.pending-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mini-print-btn {
+  background-color: #f0ad4e;
+  border: none;
+  color: white;
+  padding: 2px 4px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.mini-print-btn:hover {
+  background-color: #ec971f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.mini-print-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* డాట్ మ్యాట్రిక్స్ కోసం ప్రత్యేకంగా */
+.dmp-print-container {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11pt;
+  line-height: 1.2;
+  color: #000;
+  width: 100%;
+  padding: 10px;
+}
+
+@media print {
+  /* వెబ్ పేజీ హెడర్/ఫుటర్లు ప్రింట్ అవ్వకుండా */
+  @page {
+    margin: 0;
+  }
+  body {
+    margin: 1cm;
+  }
+}

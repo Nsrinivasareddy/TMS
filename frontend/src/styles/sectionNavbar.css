@@ -1,0 +1,93 @@
+/* File Name: frontend/src/styles/sectionNavbar.css */
+
+:root {
+  --text-bright: #ffffff;
+  --secondary-glow: linear-gradient(135deg, #a5156e 0%, #2aa819 100%);
+}
+
+.sec-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 25, 47, 0.95); /* Navy Blue Theme */
+  padding: 15px 30px; 
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(58, 123, 213, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+}
+
+/* Left Side Info Style */
+.sec-nav-left {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sec-nav-left span {
+  font-size: 12px;
+  color: #00d2ff;
+  font-weight: bold;
+}
+
+/* ⭐ బటన్ల ఏరియా */
+.sec-nav-center {
+  display: flex;
+  gap: 12px; 
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  padding: 10px;
+  max-width: 65%; 
+}
+
+/* ⭐ వర్క్ బటన్లు */
+.work-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-bright);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 140px; /* కొంచెం తగ్గించాను స్క్రీన్ లో పట్టడానికి */
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.work-btn:hover {
+  background: var(--secondary-glow);
+  border-color: transparent;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 15px rgba(118, 75, 162, 0.4);
+  color: white;
+}
+
+/* --- Back to Main Button --- */
+.back-main-btn {
+    background: rgba(255, 255, 255, 0.05); 
+    color: #f8fafc;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.back-main-btn:hover {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); 
+    border-color: transparent;
+    color: white;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 15px rgba(245, 87, 108, 0.4);
+}

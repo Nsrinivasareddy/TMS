@@ -1,0 +1,164 @@
+/* File Name: frontend/src/styles/navbar.css */
+:root {
+  /* Navy Blue Base Colors */
+  --nav-bg: rgba(10, 25, 47, 0.9);
+  --glass-blur: blur(15px);
+  --border-color: rgba(0, 210, 255, 0.2);
+  --text-sub: #cbd5e0;
+  
+  /* Dynamic Gradients */
+  --primary-navy: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+  --dynamic-glow: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+  --hover-gradient: linear-gradient(135deg, #00d2ff 0%, #0072ff 100%);
+  
+  /* Dynamic Button Gradients */
+  --btn-gradient: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+  --danger-glow: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+}
+
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--nav-bg);
+  backdrop-filter: var(--glass-blur);
+  padding: 0 40px;
+  height: 75px;
+  border-bottom: 2px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* --- STATION DETAILS (Left Side Dynamic Text) --- */
+.nav-user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.2;
+}
+
+.detail-item strong,
+.nav-user-details span {
+  font-weight: 900;
+}
+
+.nav-user-details span strong {
+  background: var(--dynamic-glow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 4px rgba(0, 210, 255, 0.5));
+}
+
+/* --- MIDDLE LINKS --- */
+.nav-links-list {
+  display: flex;
+  flex-wrap: wrap; /* లింకులు ఎక్కువైతే కింద లైన్‌కి వస్తాయి */
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* ⭐ గ్యాప్ కొద్దిగా పెంచడం జరిగింది */
+  flex: 1;
+  max-width: 65%;
+  margin: 0 15px;
+  /* పైన, కింద గ్యాప్ కోసం మార్జిన్ */
+  padding: 10px 0; 
+}
+
+.nav-item-link {
+  color: var(--text-sub);
+  font-weight: 900;
+  font-size: 17px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  /* ⭐ యానిమేషన్ సమయం మరియు స్ప్రింగ్ ఎఫెక్ట్ */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /* ⭐ లైన్ల మధ్య స్పేసింగ్ కోసం డిస్ప్లే ప్రాపర్టీ */
+  display: inline-block; 
+}
+
+/* ⭐ నవ్‌బార్ లింకుల మీద మౌస్ పెట్టినప్పుడు */
+.nav-item-link:hover {
+  background: var(--hover-gradient);
+  color: #030a1c;
+  /* ⭐ పైకి లేచే ఎఫెక్ట్ ను తగ్గించాము (overlap కాకుండా) */
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 210, 255, 0.4);
+  letter-spacing: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-item-link:active {
+  transform: translateY(0) scale(0.99);
+}
+
+/* --- DYNAMIC LOGOUT BUTTON --- */
+.logout-button {
+  background: var(--danger-glow);
+  padding: 11px 24px;
+  border-radius: 50px; 
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: 900;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(225, 29, 72, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  white-space: nowrap;
+}
+
+.logout-button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(225, 29, 72, 0.6);
+  letter-spacing: 1px;
+}
+
+.logout-button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* --- RESPONSIVE SETTINGS --- */
+@media (max-width: 1200px) {
+  .main-navbar {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 12px 15px;
+  }
+
+  .nav-links-list {
+    max-width: 100%;
+    order: 3;
+    gap: 8px;
+  }
+
+  .nav-user-details {
+    order: 1;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .logout-button {
+    order: 2;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-navbar {
+    flex-direction: column;
+  }
+  
+  .nav-item-link {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}

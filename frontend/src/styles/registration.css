@@ -1,0 +1,107 @@
+/* File Name: frontend/src/styles/registration.css */
+
+.reg-container {
+  max-width: 700px;
+  margin: 30px auto;
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(58, 123, 213, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.reg-title {
+  text-align: center;
+  color: #00d2ff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reg-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Full width for last row or specific inputs */
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 13px;
+  color: #a0aec0;
+  font-weight: 600;
+}
+
+.form-group input, .form-group select {
+  background: rgba(10, 25, 47, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 12px;
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+  border-color: #00d2ff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+.pwd-area {
+  display: flex;
+  gap: 10px;
+}
+
+.pwd-area input {
+  flex: 1;
+}
+
+.gen-btn {
+  background: linear-gradient(135deg, #00d2ff 0%, #0072ff 100%);
+  color: white;
+  border: none;
+  padding: 0 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+
+.gen-btn:hover {
+  transform: translateY(-2px);
+}
+
+.submit-btn {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px rgba(245, 87, 108, 0.4);
+}

@@ -1,0 +1,240 @@
+/* ==========================================================================
+   SRINIVASA ROAD TRANSPORT (SRT) - LORRY SHED (SHED OUT) COMPACT STYLE SHEET
+   ========================================================================== */
+
+/* 1. మెయిన్ కంటైనర్ - స్క్రీన్ హైట్ కి సరిగ్గా ఫిట్ చేస్తుంది */
+.shed-entry-container {
+    padding: 8px 15px;
+    height: calc(100vh - 65px); 
+    background-color: #0b1437;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden; /* స్క్రీన్ స్క్రోలింగ్ అవ్వకుండా లాక్ చేస్తుంది */
+    box-sizing: border-box;
+}
+
+/* 2. మెయిన్ కార్డ్ ప్యానెల్ */
+.shed-entry-card {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #111c44;
+    border-radius: 4px;
+    padding: 12px 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    border: 1px solid #1e295d;
+    margin-top: 2px;
+    box-sizing: border-box;
+}
+
+/* 3. హెడర్ టైటిల్ */
+.shed-entry-title {
+    color: #ffffff;
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #243068;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* 4. ఆప్షన్స్ బటన్ ప్యానెల్ */
+.option-button-panel {
+    display: flex;
+    align-items: center;
+    background-color: #1b254b;
+    padding: 4px 8px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    border: 1px solid #243068;
+    gap: 8px;
+}
+
+.panel-label {
+    color: #ecc94b;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.panel-btn {
+    background-color: #2d3748;
+    color: #fff;
+    border: 1px solid #4a5568;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.2s;
+}
+
+.panel-btn:hover {
+    background-color: #4a5568;
+}
+
+.active-mode {
+    background-color: #48bb78 !important;
+    border-color: #38a169 !important;
+    color: #fff !important;
+    box-shadow: 0 0 5px rgba(72, 187, 120, 0.5);
+}
+
+.btn-exit {
+    background-color: #e53e3e !important;
+    border-color: #c53030 !important;
+    margin-left: auto;
+}
+
+.btn-exit:hover {
+    background-color: #c53030 !important;
+}
+
+/* 5. ఫార్మ్ లేఅవుట్ */
+.main-entry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 🌟 మొదటి వరుస: ఫ్లెక్స్ బాక్స్ ద్వారా ఫీల్డ్స్ చిన్నగా ఉంచడానికి */
+.shed-top-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 4px;
+    align-items: flex-start;
+}
+
+.shed-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.shed-label {
+    color: #a0aec0;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* 6. గ్లోబల్ ఇన్‌పుట్ స్టైల్స్ (ఇక్కడ విడ్త్ 100% తీసేశాను) */
+.master-entry-input {
+    height: 28px !important;
+    padding: 2px 6px !important;
+    font-size: 12px !important;
+    background-color: #1b254b !important;
+    border: 1px solid #243068 !important;
+    color: #ffffff !important;
+    border-radius: 3px !important;
+    outline: none;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.master-entry-input:focus {
+    border-color: #4299e1 !important;
+    box-shadow: 0 0 4px rgba(66, 153, 225, 0.5);
+    background-color: #222d5a !important;
+}
+
+/* 🌟 7. ప్రతి ఫీల్డ్‌కి పక్కాగా వెడల్పు (Width) కట్టడి లాజిక్ */
+
+/* డేట్ ఇన్‌పుట్ బాక్స్ కేవలం 10-15 అక్షరాలకు సరిపోయేలా (140px) */
+.field-date input, 
+.field-date {
+    width: 140px !important;
+}
+
+/* లారీ నెంబర్ సెలెక్ట్ బాక్స్ (220px) */
+.field-lorry select,
+.field-lorry {
+    width: 220px !important;
+}
+
+/* ట్రిప్ నెంబర్ బాక్స్ (160px) */
+.field-tripno input,
+.field-tripno {
+    width: 160px !important;
+}
+
+/* 8. డ్రైవర్ & కిలోమీటర్ వరుస (డ్రైవర్ పెద్దగా, KM చిన్నగా రావడానికి) */
+.shed-grid-2col {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+.shed-grid-2col .master-entry-input {
+    width: 100% !important; /* ఈ గ్రిడ్ లోపల ఉన్నవి మాత్రం ఆ కాలమ్ విడ్త్ కి సరిపోతాయి */
+}
+
+/* రీడ్-ఓన్లీ / డిసేబుల్డ్ ఫీల్డ్స్ */
+.readonly-status,
+.main-entry-form input[disabled] {
+    background-color: #0f172a !important;
+    color: #38bdf8 !important;
+    border-color: #1e293b !important;
+    cursor: not-allowed;
+    font-weight: bold;
+}
+
+/* 9. మెసేజ్ బాక్స్ */
+.master-entry-message-box {
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.master-entry-message-box.success {
+    background-color: rgba(72, 187, 120, 0.2);
+    color: #48bb78;
+    border: 1px solid #48bb78;
+}
+
+.master-entry-message-box.error {
+    background-color: rgba(229, 62, 62, 0.2);
+    color: #f56565;
+    border: 1px solid #f56565;
+}
+
+/* 10. డివైడర్ & సリューション */
+.section-divider {
+    border-top: 1px dashed #243068;
+    margin: 5px 0;
+    padding-top: 4px;
+    font-size: 11px;
+    color: #ecc94b;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.submit-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.master-entry-submit-button {
+    height: 32px !important;
+    padding: 0 25px !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #2b6cb0 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    transition: background-color 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
