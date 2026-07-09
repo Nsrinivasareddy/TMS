@@ -21,8 +21,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5174", "https://your-vercel-app-url.vercel.app"], // ఇలా అరే (Array) రూపంలో ఇవ్వండి
-
+  origin: ["http://localhost:5173", "http://localhost:5174", "https://nsrtms.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
@@ -31,7 +30,7 @@ app.use(express.json());
 // ==========================================
 // 1. DATABASE CONNECTION
 // ==========================================
-const dbURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/TMS_Database';
+const dbURI = process.env.MONGODB_URI;
 
 
 mongoose.connect(dbURI)
