@@ -40,7 +40,7 @@ const LorryMaster = () => {
 
     const fetchLorries = async () => {
         try {
-            const res = await axios.get('http://localhost:5001/api/admin/lorries');
+            const res = await axios.get('https://tms-crh2.onrender.com/api/admin/lorries');
             if (res.data.success) setLorryList(res.data.data);
         } catch (err) { console.error(err); }
     };
@@ -55,7 +55,7 @@ const LorryMaster = () => {
         setLoading(true);
         setMessage({ type: '', text: '' });
         try {
-            const res = await axios.post('http://localhost:5001/api/admin/lorry-save', formData);
+            const res = await axios.post('https://tms-crh2.onrender.com/api/admin/lorry-save', formData);
             if (res.data.success) {
                 setMessage({ type: 'success', text: res.data.message });
                 setFormData({

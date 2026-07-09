@@ -20,7 +20,7 @@ const Registration = () => {
     useEffect(() => {
         const fetchStations = async () => {
             try {
-                const response = await axios.get('http://localhost:5001/api/stations');
+                const response = await axios.get('https://tms-crh2.onrender.com/api/stations');
                 setAllStations(response.data);
             } catch (error) {
                 console.error("Error loading stations:", error);
@@ -87,7 +87,7 @@ const Registration = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5001/api/users/register', formData);
+            const response = await axios.post('https://tms-crh2.onrender.com/api/users/register', formData);
             if (response.status === 201 || response.status === 200) {
                 alert(`SUCCESS! User ${formData.userId} Registered.`);
                 setFormData({ userId: '', email: '', mobile: '', sectionName: '', stationName: '', stationCode: '', password: '' });

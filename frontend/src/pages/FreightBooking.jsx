@@ -32,7 +32,7 @@ const FreightBooking = ({ userData, onBackToBranches }) => {
   const [formData, setFormData] = useState(initialState);
   const checkDuplicateLR = async (lrno) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/lr/check?lrno=${lrno}&stn=${sCode}`);
+      const response = await fetch(`https://tms-crh2.onrender.com/api/lr/check?lrno=${lrno}&stn=${sCode}`);
       const data = await response.json();
       if (data.exists) {
         alert("ఈ LR నంబర్ ఆల్రెడీ సేవ్ అయింది!");
@@ -54,7 +54,7 @@ const fetchNextLR = useCallback(async (typeOverride) => {
       ? "AP"
       : "OS";
 
-    const response = await fetch("http://localhost:5001/api/lrseries/next-lr", {
+    const response = await fetch("https://tms-crh2.onrender.com/api/lrseries/next-lr", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -98,11 +98,11 @@ const fetchNextLR = useCallback(async (typeOverride) => {
       try {
         await fetchNextLR(formData.lrtype);
         const [stnRes, quotRes, holdRes, distRes, billsRes] = await Promise.all([
-          fetch("http://localhost:5001/api/stations/all"),
-          fetch("http://localhost:5001/api/quotations/all"),
-          fetch("http://localhost:5001/api/holders/all"),
-          fetch("http://localhost:5001/api/kilometers/all"),
-          fetch("http://localhost:5001/api/lrseries/get-all-bills")
+          fetch("https://tms-crh2.onrender.com/api/stations/all"),
+          fetch("https://tms-crh2.onrender.com/api/quotations/all"),
+          fetch("https://tms-crh2.onrender.com/api/holders/all"),
+          fetch("https://tms-crh2.onrender.com/api/kilometers/all"),
+          fetch("https://tms-crh2.onrender.com/api/lrseries/get-all-bills")
         ]);
         if (stnRes.ok) setStations(await stnRes.json());
         if (quotRes.ok) {
@@ -435,7 +435,7 @@ const handleSave = async (shouldPrint = false) => {
       shouldPrint: !!shouldPrint
     };
 
-    const res = await fetch("http://localhost:5001/api/lrseries/save", {
+    const res = await fetch("https://tms-crh2.onrender.com/api/lrseries/save", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)

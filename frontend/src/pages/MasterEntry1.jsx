@@ -66,7 +66,7 @@ const MasterEntry = () => {
 
     const fetchCategoriesFromMasters = async () => {
         try {
-const res = await axios.get('http://localhost:5001/api/masters/main-heads');
+const res = await axios.get('https://tms-crh2.onrender.com/api/masters/main-heads');
             if (res.data && res.data.success) {
                 const allRecords = res.data.data || [];
                 const existingMap = new Map();
@@ -226,7 +226,7 @@ const res = await axios.get('http://localhost:5001/api/masters/main-heads');
 
     const fetchAllStationsFromDB = async () => {
         try {
-            const res = await axios.get('http://localhost:5001/api/stations/all');
+            const res = await axios.get('https://tms-crh2.onrender.com/api/stations/all');
             const data = res.data;
             setDbStations(Array.isArray(data) ? data : (data.data || []));
         } catch (error) {
@@ -245,7 +245,7 @@ const res = await axios.get('http://localhost:5001/api/masters/main-heads');
         setLoading(true);
         try {
             
-            const res = await axios.get(`http://localhost:5001/api/masters/details/${code}`);
+            const res = await axios.get(`https://tms-crh2.onrender.com/api/masters/details/${code}`);
             if (res.data && res.data.success) {
                 const dbData = res.data.data;
                 let dbStatus = String(dbData.ac_status || 'CUSTOMER');
@@ -328,7 +328,7 @@ const handleSubmit = async (e) => {
     setStatusMsg({ type: '', text: '' });
 
     try {
-        const res = await axios.post('http://localhost:5001/api/masters/accounts/master-save', cleanPayload);
+        const res = await axios.post('https://tms-crh2.onrender.com/api/masters/accounts/master-save', cleanPayload);
                 if (res && res.data.success) {
             setStatusMsg({ type: 'success', text: `✓ విజయవంతంగా సేవ్ అయింది! AC_NAME: "${formData.input_value}"` });
             setFormData(initialFormState);

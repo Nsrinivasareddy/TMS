@@ -69,7 +69,7 @@ const ShedOutPage = () => {
     try {
       setLoading(true);
       setApiError(null);
-      const response = await axios.get("http://localhost:5001/api/shed/available-resources", {
+      const response = await axios.get("https://tms-crh2.onrender.com/api/shed/available-resources", {
         withCredentials: true
       });
 
@@ -168,7 +168,7 @@ const ShedOutPage = () => {
     };
 
     try {
-      const response = await axios.post("http://localhost:5001/api/shed/save-dispatch", payload, {
+      const response = await axios.post("https://tms-crh2.onrender.com/api/shed/save-dispatch", payload, {
         withCredentials: true
       });
 
