@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import '../styles/Login.css'; // మీ కొత్త CSS ఫైల్
+import '../styles/login.css'; // మీ కొత్త CSS ఫైల్
 
 const Login = ({ setUserData }) => {
     const [userId, setUserId] = useState('');
