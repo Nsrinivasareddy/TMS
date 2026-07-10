@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import '../styles/login.css'; // మీ కొత్త CSS ఫైల్
+import '../styles/login.css'; 
 
 const Login = ({ setUserData }) => {
     const [userId, setUserId] = useState('');
@@ -32,7 +32,7 @@ const Login = ({ setUserData }) => {
         <div className="login-page">
             <div className="login-card-elevated">
                 <h1 className="logo-text">NSR TMS</h1>
-                <p style={{ color: '#7e8ca1', marginBottom: '30px' }}>Train Management System</p>
+                <p style={{ color: '#7e8ca1', marginBottom: '30px' }}>Transport Management System</p>
 
                 {error && <div className="error-msg">{error}</div>}
                 
