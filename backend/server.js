@@ -21,9 +21,10 @@ const app = express();
 
 
 app.use(cors({
-  origin: ["*"],
+    origin: 'https://nsr-tms.vercel.app',
+  //origin: ["*"],
   //origin: ["http://localhost:5173", "http://localhost:5174", "https://nsrtms.vercel.app"],
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }));
 app.use(express.json()); 
