@@ -21,7 +21,8 @@ const app = express();
 
 
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5174", "https://nsrtms.vercel.app"],
+  origin: ["*"],
+  //origin: ["http://localhost:5173", "http://localhost:5174", "https://nsrtms.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
