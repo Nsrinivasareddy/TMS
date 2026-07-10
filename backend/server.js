@@ -30,7 +30,7 @@ app.use(express.json());
 // ==========================================
 // 1. DATABASE CONNECTION
 // ==========================================
-const dbURI = process.env.MONGODB_URI;
+const dbURI = process.env.MONGO_URI;
 
 
 mongoose.connect(dbURI)
